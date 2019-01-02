@@ -12,7 +12,7 @@ This plugin helps you easily create (comment, remove, show all) log statements (
 
 It places selected variable in log statement like console.log("variable", variable);
 
-*This is not a snippet.* 
+*This is not a snippet.*
 
 #### Supported languages
 
@@ -32,19 +32,19 @@ you can find that functionality in context menu (right click) or Command Palette
 
 | Javascript |
 | ---------- |
-| <img src="https://raw.githubusercontent.com/unknownuser88/consolewrap/demo/images/js.gif" alt="Javascript"> |
+| <img src="https://raw.githubusercontent.com/EatBreatheCode/sublime_console_wrap/demo/images/js.gif" alt="Javascript"> |
 
 | Python |
 | ------ |
-| <img src="https://raw.githubusercontent.com/unknownuser88/consolewrap/demo/images/py.gif" alt="Python"> |
+| <img src="https://raw.githubusercontent.com/EatBreatheCode/sublime_console_wrap/demo/images/py.gif" alt="Python"> |
 
 | Php |
 | --- |
-| <img src="https://raw.githubusercontent.com/unknownuser88/consolewrap/demo/images/php.gif" alt="Php"> |
+| <img src="https://raw.githubusercontent.com/EatBreatheCode/sublime_console_wrap/demo/images/php.gif" alt="Php"> |
 
 | All Logs |
 | -------- |
-| <img src="https://raw.githubusercontent.com/unknownuser88/consolewrap/demo/images/list.gif" alt="All Logs"> |
+| <img src="https://raw.githubusercontent.com/EatBreatheCode/sublime_console_wrap/demo/images/list.gif" alt="All Logs"> |
 
 
 ## Key Binding
@@ -52,13 +52,13 @@ you can find that functionality in context menu (right click) or Command Palette
 The default key binding is `"ctrl+shift+q"` and `"ctrl+shift+alt+q"` (insert before selection).
 
 ```javascript
-{ 
-    "keys": ["ctrl+shift+q"], 
+{
+    "keys": ["ctrl+shift+q"],
     "command": "console_wrap",
     "args": {"insert_before": false}
 },
-{ 
-    "keys": ["ctrl+shift+alt+q"], 
+{
+    "keys": ["ctrl+shift+alt+q"],
     "command": "console_wrap",
     "args": {"insert_before": true}
 }
@@ -132,7 +132,7 @@ With [Package Control](http://wbond.net/sublime_packages/package_control):
 
 Manually:
 
-1. Clone or [download](https://github.com/unknownuser88/consolewrap/archive/master.zip) git repo into your packages folder (in Sublime Text, find Browse Packages... menu item to open this folder)
+1. Clone or [download](https://github.com/EatBreatheCode/sublime_console_wrap/archive/master.zip) git repo into your packages folder (in Sublime Text, find Browse Packages... menu item to open this folder)
 2. Restart Sublime Text editor (if required)
 
 ---
