@@ -1,12 +1,12 @@
 Console Wrap
 ================
 
-<p>
-    <img src="https://img.shields.io/github/release/unknownuser88/consolewrap.svg" alt="Release version">
-    <img src="https://img.shields.io/badge/stability-stable-brightgreen.svg" alt="Stability: Stable">
-    <img src="https://img.shields.io/packagecontrol/dt/Console%20Wrap.svg" alt="Package Control">
-    <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="License: MIT">
-</p>
+<!-- <p>
+	<img src="https://img.shields.io/github/release/unknownuser88/consolewrap.svg" alt="Release version">
+	<img src="https://img.shields.io/badge/stability-stable-brightgreen.svg" alt="Stability: Stable">
+	<img src="https://img.shields.io/packagecontrol/dt/Console%20Wrap.svg" alt="Package Control">
+	<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="License: MIT">
+</p> -->
 
 This plugin helps you easily create (comment, remove, show all) log statements (console.log, print etc.)
 
@@ -32,19 +32,19 @@ you can find that functionality in context menu (right click) or Command Palette
 
 | Javascript |
 | ---------- |
-| ![Javascript](images/js.gif) |
+| <img src="images/js.gif" alt="Javascript"> |
 
 | Python |
 | ------ |
-| ![Python](images/py.gif)  |
+| <img src="images/py.gif" alt="Python"> |
 
 | Php |
 | --- |
-| ![Php](images/php.gif) |
+| <img src="images/php.gif" alt="Php"> |
 
 | All Logs |
 | -------- |
-| ![All Logs](images/list.gif)  |
+| <img src="images/list.gif" alt="All Logs"> |
 
 
 ## Key Binding
@@ -53,14 +53,14 @@ The default key binding is `"ctrl+shift+q"` and `"ctrl+shift+alt+q"` (insert bef
 
 ```javascript
 {
-    "keys": ["ctrl+shift+q"],
-    "command": "console_wrap",
-    "args": {"insert_before": false}
+	"keys": ["ctrl+shift+q"],
+	"command": "console_wrap",
+	"args": {"insert_before": false}
 },
 {
-    "keys": ["ctrl+shift+alt+q"],
-    "command": "console_wrap",
-    "args": {"insert_before": true}
+	"keys": ["ctrl+shift+alt+q"],
+	"command": "console_wrap",
+	"args": {"insert_before": true}
 }
 ```
 
@@ -68,24 +68,24 @@ The default key binding is `"ctrl+shift+q"` and `"ctrl+shift+alt+q"` (insert bef
 
 ```javascript
 {
-    "caption": "Console Wrap: Create logs",
-    "command": "console_wrap"
+	"caption": "Console Wrap: Create logs",
+	"command": "console_wrap"
 }, {
-    "caption": "Console Wrap: Remove logs",
-    "command": "console_action",
-    "args": {"action": "remove"}
+	"caption": "Console Wrap: Remove logs",
+	"command": "console_action",
+	"args": {"action": "remove"}
 }, {
-    "caption": "Console Wrap: Remove Commented logs",
-    "command": "console_action",
-    "args": {"action": "remove_commented"}
+	"caption": "Console Wrap: Remove Commented logs",
+	"command": "console_action",
+	"args": {"action": "remove_commented"}
 }, {
-    "caption": "Console Wrap: Comment logs",
-    "command": "console_action",
-    "args": {"action": "comment"}
+	"caption": "Console Wrap: Comment logs",
+	"command": "console_action",
+	"args": {"action": "comment"}
 }, {
-    "caption": "Console Wrap: Show all logs",
-    "command": "console_action",
-    "args": {"action": "show_quick_nav"}
+	"caption": "Console Wrap: Show all logs",
+	"command": "console_action",
+	"args": {"action": "show_quick_nav"}
 }
 ```
 
@@ -93,32 +93,32 @@ The default key binding is `"ctrl+shift+q"` and `"ctrl+shift+alt+q"` (insert bef
 
 ```javascript
 {
-    "js": {
-        "consoleStr"   : "{title}, {variable}", // "{title}, tmpVal = {variable}" to assigne value to temporary parameter output: console.log('title', tmpVal = variable);
-        "consoleFunc"  : ["console", "log"],    // You can change default log statement for example ["logger", "info"] output: logger.info('title', variable);
-        "single_quotes": false,                 // If true output: console.log('title', variable);
-        "semicolon"    : true,                  // If false, will not add semicolon at end of line
-        "log_types"    : ["log", "info", "warn", "error"]
-    },
-    "py": {
-        "consoleStr"   : "{title}, {variable}",
-        "consoleFunc"  : ["print"],
-        "single_quotes": false
-    },
-    "php": {
-        "consoleFunc"  : ["print_r"],   // var_dump or if you have custom logger ["$logger", "debug"] output: $logger->debug($variable);
-        "preTag"       : true,          // Put log in pre tag like echo '<pre>'; print_r($variable); echo '</pre>';
-        "dieAfterLog"  : false          // echo '<pre>'; print_r($variable); echo '</pre>'; die();
-    },
-    "fileTypeMap" : {                   // Maps file type to wrapper. For example "text.html.vue": "js" means use js wrapper in vue js files
-        "text.html.vue"  : "js",        // php,python,js is included by dafault ("embedding.php": "php", "source.js": "js", "source.python": "py")
-        "source.ts"      : "js",
-        "source.tsx"     : "js",
-        "source.coffee"  : "js",
-        "text.html.basic": "js",
-        "text.html.blade": "js",
-        "text.html.twig" : "js"
-    }
+	"js": {
+		"consoleStr"   : "{title}, {variable}", // "{title}, tmpVal = {variable}" to assigne value to temporary parameter output: console.log('title', tmpVal = variable);
+		"consoleFunc"  : ["console", "log"],    // You can change default log statement for example ["logger", "info"] output: logger.info('title', variable);
+		"single_quotes": false,                 // If true output: console.log('title', variable);
+		"semicolon"    : true,                  // If false, will not add semicolon at end of line
+		"log_types"    : ["log", "info", "warn", "error"]
+	},
+	"py": {
+		"consoleStr"   : "{title}, {variable}",
+		"consoleFunc"  : ["print"],
+		"single_quotes": false
+	},
+	"php": {
+		"consoleFunc"  : ["print_r"],   // var_dump or if you have custom logger ["$logger", "debug"] output: $logger->debug($variable);
+		"preTag"       : true,          // Put log in pre tag like echo '<pre>'; print_r($variable); echo '</pre>';
+		"dieAfterLog"  : false          // echo '<pre>'; print_r($variable); echo '</pre>'; die();
+	},
+	"fileTypeMap" : {                   // Maps file type to wrapper. For example "text.html.vue": "js" means use js wrapper in vue js files
+		"text.html.vue"  : "js",        // php,python,js is included by dafault ("embedding.php": "php", "source.js": "js", "source.python": "py")
+		"source.ts"      : "js",
+		"source.tsx"     : "js",
+		"source.coffee"  : "js",
+		"text.html.basic": "js",
+		"text.html.blade": "js",
+		"text.html.twig" : "js"
+	}
 }
 
 ```
