@@ -25,26 +25,26 @@ It places selected variable in log statement like console.log("variable", variab
 First you need to select a variable (or put cursor on it) and press `"ctrl+shift+q"`. The log line will appear on the next line. Press `"ctrl+shift+q"` again to change wrapping (info,warn etc.)
 
 You can Also remove, comment or remove commented log statements from your selsection or from all document
-you can find that functionality in context menu (right click) or Command Palette (command+shift+p on OS X, control+shift+p on Linux/Windows).
+you can find that functionality in context menu (right click) or Command Palette (command+shift+p on macOS, control+shift+p on Linux/Windows).
 
 
 ## Screenshots
 
 | Javascript |
 | ---------- |
-| <img src="https://raw.githubusercontent.com/EatBreatheCode/sublime_console_wrap/demo/images/js.gif" alt="Javascript"> |
+| ![Javascript](images/js.gif) |
 
 | Python |
 | ------ |
-| <img src="https://raw.githubusercontent.com/EatBreatheCode/sublime_console_wrap/demo/images/py.gif" alt="Python"> |
+| ![Python](images/py.gif)  |
 
 | Php |
 | --- |
-| <img src="https://raw.githubusercontent.com/EatBreatheCode/sublime_console_wrap/demo/images/php.gif" alt="Php"> |
+| ![Php](images/php.gif) |
 
 | All Logs |
 | -------- |
-| <img src="https://raw.githubusercontent.com/EatBreatheCode/sublime_console_wrap/demo/images/list.gif" alt="All Logs"> |
+| ![All Logs](images/list.gif)  |
 
 
 ## Key Binding
