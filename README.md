@@ -32,19 +32,19 @@ you can find that functionality in context menu (right click) or Command Palette
 
 | Javascript |
 | ---------- |
-| <img src="images/js.gif" alt="Javascript"> |
+| ![Javascript](docs/js.gif) |
 
 | Python |
 | ------ |
-| <img src="images/py.gif" alt="Python"> |
+| ![Python](docs/py.gif) |
 
 | Php |
 | --- |
-| <img src="images/php.gif" alt="Php"> |
+| ![Php](docs/php.gif) |
 
 | All Logs |
 | -------- |
-| <img src="images/list.gif" alt="All Logs"> |
+| ![All Logs](docs/list.gif) |
 
 
 ## Key Binding

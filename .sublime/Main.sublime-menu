@@ -17,22 +17,22 @@
 							{
 								"caption": "Comment All logs",
 								"command": "console_action",
-								"args": {"action": "comment"}
+								"args": { "action": "comment" }
 							},
 							{
 								"caption": "Remove Commented logs",
 								"command": "console_action",
-								"args": {"action": "remove_commented"}
+								"args": { "action": "remove_commented" }
 							},
 							{
 								"caption": "Remove All logs",
 								"command": "console_action",
-								"args": {"action": "remove"}
+								"args": { "action": "remove" }
 							},
 							{
 								"caption": "Show all logs",
 								"command": "console_action",
-								"args": {"action": "show_quick_nav"}
+								"args": { "action": "show_quick_nav" }
 							}
 						]
 					}
@@ -58,42 +58,28 @@
 						[
 							{
 								"caption": "Settings",
-								"command": "console_wrap_edit_settings", "args": {
+								"command": "edit_settings",
+								"args":
+								{
 									"base_file": "${packages}/Console Wrap/.sublime/consolewrap.sublime-settings",
-									"default": "// Settings in here override those in \"${packages}/User/consolewrap.sublime-settings\",\n\n{\n\t$0\n}\n"
+									"default": "{\n$0\n}\n"
 								}
 							},
 							{
-								"caption": "Settings - Default",
-								"command": "console_wrap_open_file", "args": {
-									"file": "${packages}/Console Wrap/.sublime/consolewrap.sublime-settings"
-								}
-							},
-							{
-								"caption": "Settings - User",
-								"command": "console_wrap_open_file", "args": {
-									"file": "${packages}/User/consolewrap.sublime-settings"
+								"caption": "Key Bindings",
+								"command": "edit_settings",
+								"args":
+								{
+									"base_file": "${packages}/Console Wrap/.sublime/Default.sublime-keymap",
+									"user_file": "${packages}/User/Default (${platform}).sublime-keymap",
+									"default": "[\n$0\n]\n"
 								}
 							},
 							{ "caption": "-" },
 							{
-								"caption": "Key Bindings",
-								"command": "console_wrap_edit_settings", "args": {
-									"base_file": "${packages}/Console Wrap/.sublime/Default (${platform}).sublime-keymap",
-									"default": "// Console Wrap Key Bindings - User\n{\n\t$0\n}\n"
-								}
-							},
-							{
-								"caption": "Key Bindings - Default",
-								"command": "console_wrap_open_file", "args": {
-									"file": "${packages}/Console Wrap/.sublime/Default (${platform}).sublime-keymap"
-								}
-							},
-							{
-								"caption": "Key Bindings - User",
-								"command": "console_wrap_open_file", "args": {
-									"file": "${packages}/User/Default (${platform}).sublime-keymap"
-								}
+								"caption": "README",
+								"command": "open_file",
+								"args": { "file": "${packages}/Console Wrap/README.md" }
 							}
 						]
 					}
