@@ -39,7 +39,7 @@ class PyWrapp(PySettings):
 			return end
 
 		if match:
-			# check if cursor is on the word and trying to get that word 
+			# check if cursor is on the word and trying to get that word
 			if cursor.begin() == cursor.end():
 				word = view.word(cursor)
 			else:
@@ -148,7 +148,7 @@ class PyWrapp(PySettings):
 		for matchNum, match in enumerate(matches):
 			string = string.replace(match.group(0), "# "+match.group(0))
 
-		# remove duplicate 
+		# remove duplicate
 		for match in re.finditer(r"((#\s?){2,})"+logFunc+"(\.?)(\w+)?\((.+)?\);?", string, re.MULTILINE):
 			string = string.replace(match.group(1), "# ")
 
@@ -167,7 +167,7 @@ class PyWrapp(PySettings):
 
 	def quick_nav_done(self, view, index, regions, showOnly=False):
 		region = sublime.Region(regions[index].b)
-		if not showOnly: 
+		if not showOnly:
 			view.sel().add(region)
 		view.show_at_center(region)
 

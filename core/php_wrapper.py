@@ -43,7 +43,7 @@ class PhpWrapp(PhpSettings):
 			return end
 
 		if match:
-			# check if cursor is on the word and trying to get that word 
+			# check if cursor is on the word and trying to get that word
 			if cursor.begin() == cursor.end():
 				word = view.word(cursor)
 			else:
@@ -136,7 +136,7 @@ class PhpWrapp(PhpSettings):
 		for line in rgx.finditer(string):
 			string = string.replace(line.group(1), "// "+line.group(1))
 
-		# remove duplicate 
+		# remove duplicate
 		for match in re.finditer(r"((\/\/\s?){2,})((echo|'+logFunc+').*;)", string, re.MULTILINE):
 			string = string.replace(match.group(1), "// ")
 
@@ -155,7 +155,7 @@ class PhpWrapp(PhpSettings):
 
 	def quick_nav_done(self, view, index, regions, showOnly=False):
 		region = sublime.Region(regions[index].b)
-		if not showOnly: 
+		if not showOnly:
 			view.sel().add(region)
 		view.show_at_center(region)
 

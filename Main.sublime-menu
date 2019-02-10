@@ -1,0 +1,148 @@
+[
+	{
+		"caption": "Tools",
+		"mnemonic": "T",
+		"id": "tools",
+		"children":
+		[
+			{
+				"id": "packages",
+				"caption": "Packages",
+				"children":
+				[
+					{
+						"caption": "Console Wrap",
+						"children":
+						[
+							{
+								"caption": "Comment All logs",
+								"command": "console_action",
+								"args": { "action": "comment" }
+							},
+							{
+								"caption": "Remove Commented logs",
+								"command": "console_action",
+								"args": { "action": "remove_commented" }
+							},
+							{
+								"caption": "Remove All logs",
+								"command": "console_action",
+								"args": { "action": "remove" }
+							},
+							{
+								"caption": "Show all logs",
+								"command": "console_action",
+								"args": { "action": "show_quick_nav" }
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"caption": "Preferences",
+		"mnemonic": "n",
+		"id": "preferences",
+		"children":
+		[
+			{
+				"caption": "Package Settings",
+				"mnemonic": "P",
+				"id": "package-settings",
+				"children":
+				[
+					{
+						"caption": "Console Wrap",
+						"children":
+						[
+							{
+								"caption": "Settings",
+								"command": "z_edit_settings",
+								"args":
+								{
+									"base_file": "${packages}/Console Wrap/consolewrap.sublime-settings",
+									"user_file": "${packages}/User/Console Wrap/consolewrap.sublime-settings",
+									"default": "{\n\t$0\n}\n"
+								}
+							},
+							{
+								"caption": "Key Bindings",
+								"command": "z_edit_settings",
+								"args":
+								{
+									"base_file": "${packages}/Console Wrap/Default.sublime-keymap",
+									"user_file": "${packages}/User/Default (${platform}).sublime-keymap",
+									"default": "[\n\t$0\n]\n"
+								}
+							},
+							{ "caption": "-" },
+							{
+								"caption": "Menus",
+								"children":
+								[
+									{
+										"caption": "Context Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"file": "${packages}/Console Wrap/Context.sublime-menu",
+											"is_parent_setting": "1",
+											"contents": "[\n\t$0\n]\n"
+										}
+									},
+									{
+										"caption": "Side Bar Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"file": "${packages}/Console Wrap/Side Bar.sublime-menu",
+											"is_parent_setting": "1",
+											"contents": "[\n\t$0\n]\n"
+										}
+									},
+									{
+										"caption": "Tab Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"file": "${packages}/Console Wrap/Tab Context.sublime-menu",
+											"is_parent_setting": "1",
+											"contents": "[\n\t$0\n]\n"
+										}
+									},
+									{
+										"caption": "Main Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"file": "${packages}/Console Wrap/Main.sublime-menu",
+											"is_parent_setting": "1",
+											"contents": "[\n\t$0\n]\n"
+										}
+									}
+								]
+							},
+							{
+								"caption": "Commands",
+								"command": "z_edit_settings",
+								"args":
+								{
+									"file": "${packages}/Console Wrap/Default.sublime-commands",
+									"is_parent_setting": "1",
+									"default": "[\n\t$0\n]\n"
+								}
+							},
+							{ "caption": "-" },
+							{
+								"caption": "README",
+								"command": "open_file",
+								"args": { "file": "${packages}/Console Wrap/README.md" }
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
