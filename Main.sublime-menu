@@ -58,17 +58,16 @@
 						[
 							{
 								"caption": "Settings",
-								"command": "z_edit_settings",
+								"command": "edit_settings",
 								"args":
 								{
-									"base_file": "${packages}/Console Wrap/consolewrap.sublime-settings",
-									"user_file": "${packages}/User/Console Wrap/consolewrap.sublime-settings",
+									"base_file": "${packages}/Console Wrap/Console Wrap.sublime-settings",
 									"default": "{\n\t$0\n}\n"
 								}
 							},
 							{
 								"caption": "Key Bindings",
-								"command": "z_edit_settings",
+								"command": "edit_settings",
 								"args":
 								{
 									"base_file": "${packages}/Console Wrap/Default.sublime-keymap",

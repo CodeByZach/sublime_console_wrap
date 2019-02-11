@@ -49,4 +49,4 @@ class ConsoleWrapEditSettingsCommand(sublime_plugin.ApplicationCommand):
 
 
 def settings():
-	return sublime.load_settings('consolewrap.sublime-settings')
+	return sublime.load_settings('Console Wrap.sublime-settings')
