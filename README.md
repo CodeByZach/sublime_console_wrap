@@ -125,7 +125,7 @@ The default key binding is `"ctrl+shift+q"` and `"ctrl+shift+alt+q"` (insert bef
 
 ## How to install
 
-With [Package Control](http://wbond.net/sublime_packages/package_control):
+With [Package Control](https://packagecontrol.io/packages/Console%20Wrap):
 
 1. Run “Package Control: Install Package” command, find and install `Console Wrap` plugin.
 2. Restart Sublime Text editor (if required)
@@ -134,5 +134,3 @@ Manually:
 
 1. Clone or [download](https://github.com/EatBreatheCode/sublime_console_wrap/archive/master.zip) git repo into your packages folder (in Sublime Text, find Browse Packages... menu item to open this folder)
 2. Restart Sublime Text editor (if required)
-
----
