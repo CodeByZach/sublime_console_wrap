@@ -1,5 +1,6 @@
 Console Wrap
 ================
+[![Latest Release](https://img.shields.io/github/tag/EatBreatheCode/sublime_console_wrap.svg?label=version)](https://github.com/EatBreatheCode/sublime_console_wrap/releases)
 
 <!-- <p>
 	<img src="https://img.shields.io/github/release/unknownuser88/consolewrap.svg" alt="Release version">
