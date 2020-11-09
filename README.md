@@ -1,6 +1,6 @@
 Console Wrap
 ================
-[![Latest Release](https://img.shields.io/github/tag/EatBreatheCode/sublime_console_wrap.svg?label=version)](https://github.com/EatBreatheCode/sublime_console_wrap/releases)
+[![Latest Release](https://img.shields.io/github/tag/CodeByZach/sublime_console_wrap.svg?label=version)](https://github.com/CodeByZach/sublime_console_wrap/releases)
 
 <!-- <p>
 	<img src="https://img.shields.io/github/release/unknownuser88/consolewrap.svg" alt="Release version">
@@ -140,5 +140,5 @@ With [Package Control](https://packagecontrol.io/packages/Console%20Wrap):
 
 Manually:
 
-1. Clone or [download](https://github.com/EatBreatheCode/sublime_console_wrap/archive/master.zip) git repo into your packages folder (in Sublime Text, find Browse Packages... menu item to open this folder)
+1. Clone or [download](https://github.com/CodeByZach/sublime_console_wrap/archive/master.zip) git repo into your packages folder (in Sublime Text, find Browse Packages... menu item to open this folder)
 2. Restart Sublime Text editor (if required)
