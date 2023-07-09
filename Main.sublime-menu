@@ -6,34 +6,18 @@
 		"children":
 		[
 			{
-				"id": "packages",
 				"caption": "Packages",
+				"id": "packages",
 				"children":
 				[
 					{
 						"caption": "Console Wrap",
 						"children":
 						[
-							{
-								"caption": "Comment All logs",
-								"command": "console_action",
-								"args": { "action": "comment" }
-							},
-							{
-								"caption": "Remove Commented logs",
-								"command": "console_action",
-								"args": { "action": "remove_commented" }
-							},
-							{
-								"caption": "Remove All logs",
-								"command": "console_action",
-								"args": { "action": "remove" }
-							},
-							{
-								"caption": "Show all logs",
-								"command": "console_action",
-								"args": { "action": "show_quick_nav" }
-							}
+							{ "caption": "Comment All logs",      "command": "console_action", "args": { "action": "comment" } },
+							{ "caption": "Remove Commented logs", "command": "console_action", "args": { "action": "remove_commented" } },
+							{ "caption": "Remove All logs",       "command": "console_action", "args": { "action": "remove" } },
+							{ "caption": "Show all logs",         "command": "console_action", "args": { "action": "show_quick_nav" } }
 						]
 					}
 				]
@@ -68,7 +52,7 @@
 							{ "caption": "-" },
 							{
 								"caption": "Key Bindings",
-								"command": "edit_settings",
+								"command": "z_edit_settings",
 								"args":
 								{
 									"base_file": "${packages}/Console Wrap/Default.sublime-keymap",
@@ -86,28 +70,7 @@
 										"command": "z_edit_settings",
 										"args":
 										{
-											"is_parent_setting": "1",
 											"base_file": "${packages}/Console Wrap/Context.sublime-menu",
-											"default": "[\n\t$0\n]\n"
-										}
-									},
-									{
-										"caption": "Side Bar Menu",
-										"command": "z_edit_settings",
-										"args":
-										{
-											"is_parent_setting": "1",
-											"base_file": "${packages}/Console Wrap/Side Bar.sublime-menu",
-											"default": "[\n\t$0\n]\n"
-										}
-									},
-									{
-										"caption": "Tab Menu",
-										"command": "z_edit_settings",
-										"args":
-										{
-											"is_parent_setting": "1",
-											"base_file": "${packages}/Console Wrap/Tab Context.sublime-menu",
 											"default": "[\n\t$0\n]\n"
 										}
 									},
@@ -116,8 +79,43 @@
 										"command": "z_edit_settings",
 										"args":
 										{
-											"is_parent_setting": "1",
 											"base_file": "${packages}/Console Wrap/Main.sublime-menu",
+											"default": "[\n\t$0\n]\n"
+										}
+									},
+									{
+										"caption": "Side Bar Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"base_file": "${packages}/Console Wrap/Side Bar.sublime-menu",
+											"default": "[\n\t$0\n]\n"
+										}
+									},
+									{
+										"caption": "Side Bar Open Files Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"base_file": "${packages}/Console Wrap/Tab Sidebar Context.sublime-menu",
+											"default": "[\n\t$0\n]\n"
+										}
+									},
+									{
+										"caption": "Tab Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"base_file": "${packages}/Console Wrap/Tab Context.sublime-menu",
+											"default": "[\n\t$0\n]\n"
+										}
+									},
+									{
+										"caption": "Widget Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"base_file": "${packages}/Console Wrap/Widget Context.sublime-menu",
 											"default": "[\n\t$0\n]\n"
 										}
 									}
@@ -128,7 +126,6 @@
 								"command": "z_edit_settings",
 								"args":
 								{
-									"is_parent_setting": "1",
 									"base_file": "${packages}/Console Wrap/Default.sublime-commands",
 									"default": "[\n\t$0\n]\n"
 								}
