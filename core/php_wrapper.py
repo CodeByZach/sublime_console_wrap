@@ -75,7 +75,7 @@ class PhpWrapp(PhpSettings):
 
 	def is_log_string(self, line):
 		logFunc = self.getConsoleFunc()[0]
-		return re.match(r"((\/\/\s)|(;\s))?(echo '<pre>';\s?)?(.+)?("+logFunc+")(\.?)(\w+)?\((.+)?\);( echo '<\/pre>';)?", line.strip())
+		return re.match(r"((\/\/\s)|(;\s))?(echo '<pre>';\s?)?(.+)?("+logFunc+r")(\.?)(\w+)?\((.+)?\);( echo '<\/pre>';)?", line.strip())
 
 	def get_indent(self, view, region, insert_before):
 		matches = re.findall(r'^(\s*)[^\s]', view.substr(region))
@@ -149,7 +149,7 @@ class PhpWrapp(PhpSettings):
 		cursor = view.sel()[0]
 		line_region = view.line(cursor)
 		string = view.substr(line_region)
-		newstring = re.sub(r"((\/\/\s)|(;\s))?(echo '<pre>';\s?)?(.+)?("+logFunc+")(\.?)(\w+)?\((.+)?\);( echo '<\/pre>';)?", '', string)
+		newstring = re.sub(r"((\/\/\s)|(;\s))?(echo '<pre>';\s?)?(.+)?("+logFunc+r")(\.?)(\w+)?\((.+)?\);( echo '<\/pre>';)?", '', string)
 		view.replace(edit, line_region, newstring)
 		view.sel().clear()
 
@@ -166,7 +166,7 @@ class PhpWrapp(PhpSettings):
 		logFunc = self.getConsoleFunc()[0]
 		get_selections(view, sublime)
 		counter = 1
-		regex = re.compile(r""+logFunc+"(\.?)(\w+)?\((.+)?\);?", re.UNICODE|re.DOTALL)
+		regex = re.compile(r""+logFunc+r"(\.?)(\w+)?\((.+)?\);?", re.UNICODE|re.DOTALL)
 		for comment_region in view.sel():
 			for splited_region in view.split_by_newlines(comment_region):
 				m = regex.search(view.substr(splited_region))
@@ -190,6 +190,6 @@ class PhpWrapp(PhpSettings):
 		cursor = view.sel()[0]
 		line_region = view.line(cursor)
 		string = view.substr(line_region)
-		newstring = re.sub(r"(\/\/\s)(echo '<pre>';\s?)?(.+)?("+logFunc+")(\.?)(\w+)?\((.+)?\);( echo '<\/pre>';)?", '', string)
+		newstring = re.sub(r"(\/\/\s)(echo '<pre>';\s?)?(.+)?("+logFunc+r")(\.?)(\w+)?\((.+)?\);( echo '<\/pre>';)?", '', string)
 		view.replace(edit, line_region, newstring)
 		view.sel().clear()

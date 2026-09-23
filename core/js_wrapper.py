@@ -71,13 +71,13 @@ class JsWrapp(JsSettings):
 
 	def is_log_string(self, line):
 		logFunc = self.getConsoleFunc()[0]
-		return re.match(r"(\/\/\s)?"+logFunc+"(\.?)(\w+)?\((.+)?\);?", line.strip())
+		return re.match(r"(\/\/\s)?"+logFunc+r"(\.?)(\w+)?\((.+)?\);?", line.strip())
 
 	def change_log_type(self, view, edit, line_region, line):
 		log_types = self.getConsoleLogTypes()
 		logFunc = self.getConsoleFunc()[0]
 		current_type = None
-		matches = re.findall(r'('+logFunc+')(\.?)(\w+)?', line)
+		matches = re.findall(r'('+logFunc+r')(\.?)(\w+)?', line)
 		if not matches:
 			return
 		func, dot, method = matches[0]
@@ -151,13 +151,13 @@ class JsWrapp(JsSettings):
 		cursor = view.sel()[0]
 		line_region = view.line(cursor)
 		string = view.substr(line_region)
-		matches = re.finditer(r"(?<!\/\/\s)"+logFunc+"(\.?)(\w+)?\((.+)?\);?", string, re.MULTILINE)
+		matches = re.finditer(r"(?<!\/\/\s)"+logFunc+r"(\.?)(\w+)?\((.+)?\);?", string, re.MULTILINE)
 
 		for match in matches:
 			string = string.replace(match.group(0), "// "+match.group(0))
 
 		# remove duplicate 
-		for match in re.finditer(r"((\/\/\s?){2,})("+logFunc+"(\.?)(\w+)?\((.+)?\);?)", string, re.MULTILINE):
+		for match in re.finditer(r"((\/\/\s?){2,})("+logFunc+r"(\.?)(\w+)?\((.+)?\);?)", string, re.MULTILINE):
 			string = string.replace(match.group(1), "// ")
 
 		view.replace(edit, line_region, string)
@@ -169,7 +169,7 @@ class JsWrapp(JsSettings):
 		cursor = view.sel()[0]
 		line_region = view.line(cursor)
 		string = view.substr(line_region)
-		newstring = re.sub(r"(\/\/\s)?"+logFunc+"(\.?)(\w+)?\((.+)?\);?", '', string)
+		newstring = re.sub(r"(\/\/\s)?"+logFunc+r"(\.?)(\w+)?\((.+)?\);?", '', string)
 		view.replace(edit, line_region, newstring)
 		view.sel().clear()
 
@@ -187,7 +187,7 @@ class JsWrapp(JsSettings):
 		logFunc = self.getConsoleFunc()[0]
 		get_selections(view, sublime)
 		counter = 1
-		regex = re.compile(r"(\/\/\s)?("+logFunc+")(\.?)(\w+)?\((.+)?\);?", re.UNICODE | re.DOTALL)
+		regex = re.compile(r"(\/\/\s)?("+logFunc+r")(\.?)(\w+)?\((.+)?\);?", re.UNICODE | re.DOTALL)
 		for comment_region in view.sel():
 			for splited_region in view.split_by_newlines(comment_region):
 				m = regex.search(view.substr(splited_region))
@@ -211,6 +211,6 @@ class JsWrapp(JsSettings):
 		cursor = view.sel()[0]
 		line_region = view.line(cursor)
 		string = view.substr(line_region)
-		newstring = re.sub(r"(\/\/\s)"+logFunc+"(\.?)(\w+)?\((.+)?\);?", '', string)
+		newstring = re.sub(r"(\/\/\s)"+logFunc+r"(\.?)(\w+)?\((.+)?\);?", '', string)
 		view.replace(edit, line_region, newstring)
 		view.sel().clear()
